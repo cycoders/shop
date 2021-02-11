@@ -21,7 +21,10 @@
     <option name="TEMPLATE_CONFIGURATION" value="Django" />
     <option name="TEMPLATE_FOLDERS">
       <list>
-        <option value="$MODULE_DIR$/templates" />
+        <option value="$MODULE_DIR$/banner/templates" />
+        <option value="$MODULE_DIR$/basket/templates" />
+        <option value="$MODULE_DIR$/comment/templates" />
+        <option value="$MODULE_DIR$/product/templates" />
       </list>
     </option>
   </component>
