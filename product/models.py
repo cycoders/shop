@@ -4,7 +4,7 @@ from django.db import models
 # Create your models here.
 
 class Product(models.Model):
-    #user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     title = models.CharField(max_length=50, null=False)
     brand = models.CharField(max_length=50, null=False)
     seller = models.CharField(max_length=50, null=False)
@@ -16,11 +16,11 @@ class Product(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
-#class ProductProperties(models.Model):
-    #product = models.ForeignKey(Product, on_delete=models.CASCADE)
-    #image = models.ImageField('product/static/images/')
-    #created_at = models.DateTimeField(auto_now_add=True)
-    #updated_at = models.DateTimeField(auto_now=True)
+class ProductProperties(models.Model):
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    image = models.ImageField('product/static/images/')
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
 
 
 
