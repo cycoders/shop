@@ -3,7 +3,6 @@ from django.shortcuts import render
 # Create your views here.
 
 
-
 def create_profile():
     pass
 
@@ -17,4 +16,7 @@ def update_profile():
 
 
 def delete_profile():
+    pass
+
+def admin():
     pass

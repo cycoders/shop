@@ -84,10 +84,10 @@ WSGI_APPLICATION = 'shop.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'my_blog',
-        'USER': 'root',
-        'PASSWORD': '',
-        'HOST': '',
+        'NAME': 'shop',
+        'USER': 'poulstar',
+        'PASSWORD': 'poulstar',
+        'HOST': '127.0.0.1',
         'PORT': '',
     }
 }
