@@ -87,8 +87,8 @@ DATABASES = {
         'NAME': 'shop',
         'USER': 'poulstar',
         'PASSWORD': 'poulstar',
-        'HOST': 'localhost',
-        'PORT': '3306',
+        'HOST': '127.0.0.1',
+        'PORT': '',
     }
 }
 
@@ -132,5 +132,4 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     BASE_DIR / "static",
-    '/var/www/static/',
 ]
