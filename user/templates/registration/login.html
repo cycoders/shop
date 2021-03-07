@@ -1,10 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
 
-</body>
-</html>
+{% block content %}
+
+    <form action="{% url 'login' %}" method="post">
+    {% csrf_token %}
+
+    <div class="d-flex justify-content-center mt-5">
+        <div class="card col-4">
+            <div class="card-header">
+                <h2>ورود</h2>
+            </div>
+            <div class="card-body">
+                <label for="id_username">نام کاربری:
+                    <input class="form-control" id="id_username" name="username" type="text" placeholder="نام کاربری">
+                </label>
+
+                <label for="id_password">گذرواژه:
+                    <input class="form-control" id="id_password" name="password" type="password" placeholder="گذرواژه">
+                </label>
+            </div>
+            <div class="card-footer">
+                <input class="btn btn-outline-success" type="submit" value="ورود">
+            </div>
+        </div>
+    </div>
+
+    </form>
+
+{% endblock content %}

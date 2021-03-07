@@ -14,6 +14,8 @@ import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
+from django.conf.global_settings import LOGIN_REDIRECT_URL
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
@@ -135,3 +137,6 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
+
+
+LOGIN_REDIRECT_URL = 'profile'
