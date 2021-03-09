@@ -89,17 +89,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'shop',
-<<<<<<< HEAD
         'USER': 'kian',
         'PASSWORD': 'kian',
         'HOST': 'localhost',
         'PORT': '3306',
-=======
-        'USER': 'poulstar',
-        'PASSWORD': 'poulstar',
-        'HOST': '127.0.0.1',
-        'PORT': '',
->>>>>>> 61962f376e9d0c8880e99283078671bb43876d10
     }
 }
 

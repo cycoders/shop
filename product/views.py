@@ -4,12 +4,12 @@ from .models import Product
 # Create your views here.
 
 
-def product_create(request):
+def create(request):
     if request.method == "POST":
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-    render(request, 'product/create_product.html')
+    return render(request, 'product/create.html')
 
 
 def product_read(request):
