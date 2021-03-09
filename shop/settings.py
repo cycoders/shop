@@ -14,6 +14,8 @@ import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
+from django.conf.global_settings import LOGIN_REDIRECT_URL
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
@@ -61,7 +63,9 @@ ROOT_URLCONF = 'shop.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')]
+        'DIRS': [
+            os.path.join(BASE_DIR, 'templates'),
+        ]
         ,
         'APP_DIRS': True,
         'OPTIONS': {
@@ -85,10 +89,17 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'shop',
+<<<<<<< HEAD
         'USER': 'kian',
         'PASSWORD': 'kian',
         'HOST': 'localhost',
         'PORT': '3306',
+=======
+        'USER': 'poulstar',
+        'PASSWORD': 'poulstar',
+        'HOST': '127.0.0.1',
+        'PORT': '',
+>>>>>>> 61962f376e9d0c8880e99283078671bb43876d10
     }
 }
 
@@ -132,5 +143,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     BASE_DIR / "static",
-    '/var/www/static/',
 ]
+
+
+LOGIN_REDIRECT_URL = 'profile'

@@ -15,12 +15,15 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='Banner',
+            name='Profile',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('product', models.DecimalField(decimal_places=4, max_digits=4)),
-                ('title', models.CharField(max_length=50)),
-                ('image', models.ImageField(upload_to='banner/static/images/')),
+                ('image', models.ImageField(upload_to='static/profile/images/')),
+                ('age', models.CharField(max_length=20)),
+                ('phone1', models.CharField(max_length=20)),
+                ('phone2', models.CharField(max_length=20)),
+                ('address', models.TextField()),
+                ('postcode', models.CharField(max_length=20)),
                 ('created_at', models.DateTimeField(auto_now_add=True)),
                 ('updated_at', models.DateTimeField(auto_now=True)),
                 ('user', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
